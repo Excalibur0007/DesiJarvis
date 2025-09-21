@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desi Jarvis - Royal AI Assistant</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="brand">
+                <div class="brand-icon">Dj</div>
+                <div class="brand-name">Desi Jarvis</div>
+            </div>
+            
+            <button class="new-chat-btn" id="clear-chat">
+                <span>✨</span>
+                New Chat
+            </button>
+            
+            <div class="persona-section">
+                <div class="persona-label">AI Persona</div>
+                <select id="persona-select" class="persona-select" aria-label="Select AI Persona">
+                    <option value="nonchalant">Nonchalant</option>
+                    <option value="chalant">Chalant</option>
+                    <option value="gemini">Gemini-Type</option>
+                </select>
+            </div>
+            
+            <button class="theme-toggle" id="theme-toggle">
+                <span>🌙</span>
+                Toggle Theme
+            </button>
+        </aside>
+
+        <!-- Main Chat Area -->
+        <main class="main-content">
+            <header class="chat-header">
+                <h1 class="chat-title">Desi Jarvis Ai</h1>
+                <div class="model-info" id="current-model">Model: Rotating...</div>
+            </header>
+
+            <div class="chat-messages" id="chat-history" role="log" aria-live="polite">
+                <!-- Welcome message -->
+                <div class="message assistant">
+                    <div class="message-avatar">R</div>
+                    <div class="message-content">
+                        Welcome to Desi Jarvis! I'm your royal AI assistant. Choose a persona and start chatting with me.
+                    </div>
+                </div>
+            </div>
+
+            <div class="typing-indicator" id="typing-indicator" aria-hidden="true">
+                <div class="message-avatar">R</div>
+                <div class="typing-dots">
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                    <div class="typing-dot"></div>
+                </div>
+            </div>
+
+            <div class="input-composer">
+                <div class="rate-warning" id="rate-warning">
+                    ⚠️ Warning: Approaching rate limit (30 RPM)!
+                </div>
+                
+                <form class="input-form" id="input-form" aria-label="Send a message">
+                    <div class="input-wrapper">
+                        <textarea 
+                            class="user-input" 
+                            id="user-input" 
+                            placeholder="Message Desi Jarvis..." 
+                            rows="1"
+                            required
+                        ></textarea>
+                        <button type="button" class="voice-btn" id="voice-input" aria-label="Voice input">
+                            🎙️
+                        </button>
+                    </div>
+                    <button type="submit" class="send-btn" aria-label="Send message">
+                        ➤
+                    </button>
+                </form>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
